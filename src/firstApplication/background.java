@@ -3,11 +3,8 @@ package firstApplication;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
-import javax.swing.JButton;
-import java.awt.BorderLayout;
-import java.awt.Color;
 
-public class main {
+public class background {
 
 	private JFrame frame;
 
@@ -18,7 +15,7 @@ public class main {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					main window = new main();
+					background window = new background();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -30,7 +27,7 @@ public class main {
 	/**
 	 * Create the application.
 	 */
-	public main() {
+	public background() {
 		initialize();
 	}
 
@@ -41,11 +38,6 @@ public class main {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		JButton btnClickMe = new JButton("Click me");
-		btnClickMe.setForeground(Color.BLACK);
-		btnClickMe.setBackground(Color.WHITE);
-		frame.getContentPane().add(btnClickMe, BorderLayout.CENTER);
 	}
 
 }
