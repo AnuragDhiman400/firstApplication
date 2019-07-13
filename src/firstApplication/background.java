@@ -1,7 +1,23 @@
 package firstApplication;
 
 import java.awt.EventQueue;
+import java.awt.Image;
+import java.awt.Toolkit;
 
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.BorderLayout;
+import javax.swing.ImageIcon;
+//import com.jgoodies.forms.layout.FormLayout;
+//import com.jgoodies.forms.layout.ColumnSpec;
+//import com.jgoodies.forms.layout.RowSpec;
+import java.awt.GridLayout;
+import java.awt.FlowLayout;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.JButton;
+import javax.swing.JTextField;
 
 
 import javax.swing.JFrame;
@@ -30,6 +46,9 @@ public class background extends game {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		
+		
+		
 		EventQueue.invokeLater(new Runnable() {
 			// changes done
 			public void run() {
@@ -47,6 +66,8 @@ public class background extends game {
 	 * Create the application.
 	 */
 	public background() {
+		
+	
 		initialize();
 	}
 
@@ -57,6 +78,11 @@ public class background extends game {
 		
 	    
 		frame = new JFrame();
+
+		frame.setBounds(100, 100, 797, 520);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+
 		frame.setBounds(100, 100, 782, 484);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
@@ -150,5 +176,6 @@ public class background extends game {
 		});
 		button_2.setBounds(553, 306, 125, 25);
 		frame.getContentPane().add(button_2);
+
 	}
 }
