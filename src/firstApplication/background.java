@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 import java.awt.Image;
 import java.awt.Toolkit;
 
+
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.BorderLayout;
@@ -18,12 +19,28 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
-public class background {
 
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+import java.awt.Font;
+
+public class background extends game {
+	
+	public int sum = 2 ;
+	
+	
+	game obj = new game();
+	//String threepointer = obj.basket1();
+	//String insideTheArc = obj.basket2();
+	//String freeThrows = obj.basket3();
+     
 	private JFrame frame;
 	private JTextField textField;
 	private JTextField textField_1;
-	private JTextField textField_2;
 
 	/**
 	 * Launch the application.
@@ -58,36 +75,107 @@ public class background {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		
+	    
 		frame = new JFrame();
+
 		frame.setBounds(100, 100, 797, 520);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+
+		frame.setBounds(100, 100, 782, 484);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
 		
-		JButton btnNewButton_1 = new JButton("New button");
-		btnNewButton_1.setBounds(111, 360, 97, 25);
-		frame.getContentPane().add(btnNewButton_1);
 		
-		JButton btnNewButton = new JButton("New button");
-		btnNewButton.setBounds(346, 360, 97, 25);
+		JButton btnNewButton = new JButton("3 pointer");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String s = Integer.toString(basket1());
+				
+			  textField.setText(s);
+			 
+				
+			}
+		});
+		btnNewButton.setBounds(13, 140, 125, 25);
 		frame.getContentPane().add(btnNewButton);
 		
-		JButton btnNewButton_2 = new JButton("New button");
-		btnNewButton_2.setBounds(585, 360, 97, 25);
+		JButton btnNewButton_1 = new JButton("insideTheArc");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String s = Integer.toString(basket2());
+				  textField.setText(s);
+					
+			}
+		});
+		btnNewButton_1.setBounds(13, 223, 125, 25);
+		frame.getContentPane().add(btnNewButton_1);
+		
+		JButton btnNewButton_2 = new JButton("freeThrows");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String s = Integer.toString(basket3());
+				  textField.setText(s);
+					
+			}
+		});
+		btnNewButton_2.setBounds(13, 306, 125, 25);
 		frame.getContentPane().add(btnNewButton_2);
 		
 		textField = new JTextField();
-		textField.setBounds(111, 155, 116, 22);
+		textField.setBounds(13, 70, 125, 22);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(346, 155, 116, 22);
-		frame.getContentPane().add(textField_1);
-		textField_1.setColumns(10);
+		JLabel lblNewLabel = new JLabel("TEAM A");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel.setBounds(37, 13, 74, 31);
+		frame.getContentPane().add(lblNewLabel);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(585, 155, 116, 22);
-		frame.getContentPane().add(textField_2);
-		textField_2.setColumns(10);
+		JLabel lblTeamB = new JLabel("TEAM B");
+		lblTeamB.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblTeamB.setBounds(588, 13, 74, 31);
+		frame.getContentPane().add(lblTeamB);
+		
+		textField_1 = new JTextField();
+		textField_1.setColumns(10);
+		textField_1.setBounds(553, 70, 125, 22);
+		frame.getContentPane().add(textField_1);
+		
+		JButton button = new JButton("3 pointer");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String s1 = Integer.toString(basket4());
+				 textField_1.setText(s1);
+				
+			}
+		});
+		button.setBounds(553, 140, 125, 25);
+		frame.getContentPane().add(button);
+		
+		JButton button_1 = new JButton("insideTheArc");
+		button_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				String s1 = Integer.toString(basket5());
+				 textField_1.setText(s1);
+				
+			}
+		});
+		button_1.setBounds(553, 223, 125, 25);
+		frame.getContentPane().add(button_1);
+		
+		JButton button_2 = new JButton("freeThrows");
+		button_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String s1 = Integer.toString(basket6());
+				 textField_1.setText(s1);
+				
+			}
+		});
+		button_2.setBounds(553, 306, 125, 25);
+		frame.getContentPane().add(button_2);
+
 	}
 }
