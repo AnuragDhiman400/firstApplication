@@ -16,6 +16,7 @@ import java.awt.GridLayout;
 import java.awt.FlowLayout;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
+import javax.swing.Icon;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
@@ -29,6 +30,8 @@ import javax.swing.JLabel;
 import java.awt.Font;
 
 public class background extends game {
+	
+	
 	
 	public int sum = 2 ;
 	
@@ -76,8 +79,13 @@ public class background extends game {
 	 */
 	private void initialize() {
 		
+		JLabel background;
 	    
 		frame = new JFrame();
+		frame.getContentPane().setLayout(null);
+		
+		
+
 
 		frame.setBounds(100, 100, 797, 520);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -176,6 +184,20 @@ public class background extends game {
 		});
 		button_2.setBounds(553, 306, 125, 25);
 		frame.getContentPane().add(button_2);
+		
+		JLabel image = new JLabel("New label");
+		image.setIcon(new ImageIcon(background.class.getResource("/firstApplication/Image/background-1.jpg")));
+		image.setBounds(0, 0, 2200, 1200);
+		image.setBackground(null);
+		
+		frame.getContentPane().add(image);
+		background = new JLabel("",JLabel.CENTER);
+		image.add(background);
+		image.setVisible(true);
+		
+	
+		
+		
 
 	}
 }
